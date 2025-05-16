@@ -11,14 +11,14 @@ const QuickOrder = ({ customerId }) => {
         const testConnection = async () => {
             try {
                 // First test server connection
-                const testResponse = await fetch('https://quick-orders-nine.vercel.app/api/test');
+                const testResponse = await fetch('https://pmfquickorder.vercel.app/api/test');
                 if (!testResponse.ok) {
                     throw new Error('Server connection failed');
                 }
                 setConnectionTest(await testResponse.json());
 
                 // Then try to fetch orders with customer ID from props
-                const ordersResponse = await fetch(`https://quick-orders-nine.vercel.app/api/orders?customer_id=${customerId}`);
+                const ordersResponse = await fetch(`https://pmfquickorder.vercel.app/api/orders?customer_id=${customerId}`);
                 if (!ordersResponse.ok) {
                     throw new Error(`Orders fetch failed with status ${ordersResponse.status}`);
                 }

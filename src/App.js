@@ -78,4 +78,4 @@ export default App;
 // For development/testing purposes, you can use a static customer ID
 // Remove this in production when you have proper authentication
 const useStaticCustomerId = true; // Set to false in production
-const apiUrl = process.env.REACT_APP_API_URL || 'https://quick-orders-nine.vercel.app';
+const apiUrl = process.env.REACT_APP_API_URL || 'https://pmfquickorder.vercel.app';

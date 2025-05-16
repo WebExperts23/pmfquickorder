@@ -14,7 +14,7 @@ const CustomerOrders = ({ customerId }) => {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await fetch(`https://quick-orders-nine.vercel.app/api/orders?customer_id=${customerId}`);
+                const response = await fetch(`https://pmfquickorder.vercel.app/api/orders?customer_id=${customerId}`);
                 if (!response.ok) {
                     throw new Error(`Failed to fetch orders: ${response.status}`);
                 }
@@ -76,7 +76,7 @@ const CustomerOrders = ({ customerId }) => {
             setLoadingVariants(prev => ({...prev, [itemKey]: true}));
             
             // Fetch variants for this product
-            const response = await fetch(`https://quick-orders-nine.vercel.app/api/product-variants?product_id=${item.product_id}`);
+            const response = await fetch(`https://pmfquickorder.vercel.app/api/product-variants?product_id=${item.product_id}`);
             
             if (!response.ok) {
                 throw new Error(`Failed to fetch variants: ${response.status}`);
@@ -130,7 +130,7 @@ const CustomerOrders = ({ customerId }) => {
             });
             
             // Call the API to create a new order with multiple items
-            const response = await fetch('https://quick-orders-nine.vercel.app/api/create-order-bulk', {
+            const response = await fetch('https://pmfquickorder.vercel.app/api/create-order-bulk', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ const CustomerOrders = ({ customerId }) => {
             alert(`Reordering ${item.title} (Quantity: ${quantity})...`);
             
             // Call the API to create a new order
-            const response = await fetch('https://quick-orders-nine.vercel.app/api/create-order', {
+            const response = await fetch('https://pmfquickorder.vercel.app/api/create-order', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

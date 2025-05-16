@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser'); // Add this
 
 const app = express();
 app.use(cors({ 
-  origin: process.env.CLIENT_URL || 'https://quick-orders-nine.vercel.app',
+  origin: process.env.CLIENT_URL || 'https://pmfquickorder.vercel.app',
   credentials: true // Important for cookies
 })); 
 app.use(cookieParser()); // Add this

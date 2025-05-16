@@ -12,7 +12,7 @@ const Products = ({ customerId }) => {
             try {
                 setLoading(true);
                 // Use the API URL with /api prefix
-                const apiUrl = 'https://quick-orders-nine.vercel.app/api';
+                const apiUrl = 'https://pmfquickorder.vercel.app/api';
                 const response = await fetch(
                     `${apiUrl}/orders?customer_id=${customerId}`,
                     {
@@ -107,7 +107,7 @@ const Products = ({ customerId }) => {
             alert(`Placing order for ${product.title} (Quantity: ${quantities[product.id]})...`);
             
             // Call the API to create a new order
-            const apiUrl = 'https://quick-orders-nine.vercel.app/api';
+            const apiUrl = 'https://pmfquickorder.vercel.app/api';
             const response = await fetch(`${apiUrl}/create-order`, {
                 method: 'POST',
                 headers: {

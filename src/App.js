@@ -39,7 +39,7 @@ function App() {
         }
         
         // If no customer ID in URL or localStorage, redirect back to Shopify
-        window.location.href = 'https://1account.myshopify.com/pages/quick-order';
+        window.location.href = 'https://pack-my-food.myshopify.com/pages/quick-order';
       } catch (error) {
         console.error('Error checking customer login:', error);
         setLoading(false);
